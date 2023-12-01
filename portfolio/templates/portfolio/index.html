@@ -36,10 +36,11 @@
     <main>
         <div class="flex-center flex-column">
             <!-- Navigation Bar Components -->
+            <div id="nav-trigger"></div>
             <div class="hidden flex-center" id="nav-bar">
                 <button class="nav-button flex-center" id="projects-button">
-                    <img src="{% static 'portfolio/media/github-logo.png' %}" alt="GitHub Logo"/>
-                    <h3>LinkedIn</h3>
+                    <img src="{% static 'portfolio/media/github-logo.png' %}" alt="Projects Icon"/>
+                    <h3>Projects</h3>
                 </button>
                 <div class="vertical-divider"></div>
                 <button class="nav-button flex-center" id="linkedin-button">
@@ -54,65 +55,22 @@
             </div>
     
             <!-- About Section Components -->
-            <div class="flex-center" id="about">
-                <!-- Profile Image (Left)-->
-                <div class="flex-center" id="profile-image">
-                    <img src="{% static 'portfolio/media/profile-image.jpg' %}">
-                </div>
-                <!-- About Me (Right) -->
-                <div class="flex-column" id="about-me">
+            <div class="flex-column flex-center" id="about-wrapper">
+                <img id="profile-image" src="{% static 'portfolio/media/profile-image.jpg' %}">
+                <div class="flex-column flex-center" id="bio-wrapper">
                     <h1>About Me</h1>
-                    <p>Hello there! My name is Siddh Patel and I am a highschool student. This website is a portfolio showing all of my completed projects. The links to my LinkedIn and GitHub profiles are below.</p>
-                    <!-- Social Media Links -->
+                    <p id="bio">Hello there! My name is Siddh Patel and I am a highschool student. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla facilisi morbi tempus iaculis urna id volutpat. Quis ipsum suspendisse ultrices gravida dictum fusce ut placerat orci. Donec et odio pellentesque diam volutpat commodo sed egestas egestas. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Elementum eu facilisis sed odio morbi quis commodo odio. Nec nam aliquam sem et tortor consequat. Urna id volutpat lacus laoreet non curabitur. Nec ullamcorper sit amet risus nullam eget felis eget. Morbi blandit cursus risus at. Scelerisque mauris pellentesque pulvinar pellentesque. Mauris cursus mattis molestie a iaculis at. Duis at consectetur lorem donec massa sapien faucibus et molestie.</p>
                 </div>
             </div>
 
-            <div class="flex-center" id="about">
-                <!-- Profile Image (Left)-->
-                <div class="flex-center" id="profile-image">
-                    <img src="{% static 'portfolio/media/profile-image.jpg' %}">
-                </div>
-                <!-- About Me (Right) -->
-                <div class="flex-column" id="about-me">
-                    <h1>About Me</h1>
-                    <p>Hello there! My name is Siddh Patel and I am a highschool student. This website is a portfolio showing all of my completed projects. The links to my LinkedIn and GitHub profiles are below.</p>
-                    <!-- Social Media Links -->
-                </div>
-            </div>
-
-            <div class="flex-center" id="about">
-                <!-- Profile Image (Left)-->
-                <div class="flex-center" id="profile-image">
-                    <img src="{% static 'portfolio/media/profile-image.jpg' %}">
-                </div>
-                <!-- About Me (Right) -->
-                <div class="flex-column" id="about-me">
-                    <h1>About Me</h1>
-                    <p>Hello there! My name is Siddh Patel and I am a highschool student. This website is a portfolio showing all of my completed projects. The links to my LinkedIn and GitHub profiles are below.</p>
-                    <!-- Social Media Links -->
-                </div>
-            </div>
-
-            <div class="flex-center" id="about">
-                <!-- Profile Image (Left)-->
-                <div class="flex-center" id="profile-image">
-                    <img src="{% static 'portfolio/media/profile-image.jpg' %}">
-                </div>
-                <!-- About Me (Right) -->
-                <div class="flex-column" id="about-me">
-                    <h1>About Me</h1>
-                    <p>Hello there! My name is Siddh Patel and I am a highschool student. This website is a portfolio showing all of my completed projects. The links to my LinkedIn and GitHub profiles are below.</p>
-                    <!-- Social Media Links -->
-                </div>
-            </div>
-
-            
-    
             <!-- Project Section Components -->
-            {% comment %} <div class="flex-column-center" id="projects">
-                <div class="flex-center">
+            <div class="flex-column flex-center" id="projects-wrapper">
+                
+                <div class="flex-column flex-center">
                     <h1>My Projects</h1>
+                    <h3>A portfolio of all my work</h3>
                 </div>
+
                 <div class="grid" id="projects-container">
                     {% for project in projects %}
                         <div class="project-item">
@@ -124,7 +82,11 @@
                         </div>
                     {% endfor %}
                 </div>
-            </div> {% endcomment %}
+
+
+            </div>
+
+
         </div>
     </main>
 </body>

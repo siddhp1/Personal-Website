@@ -12,6 +12,7 @@ main {
 }
 
 h1 {
+    margin: 0;
     font-size: 3vw;
     font-weight: 400;
 }
@@ -38,11 +39,12 @@ h3 {
 
 h6 {
 
-}
+} */
 
 p {
-
-} */
+    font-size: 1.2vw;
+    font-weight: 300;
+}
 
 button {
     font-family: 'IBM Plex Mono', monospace; 
@@ -78,6 +80,35 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.fade-in {
+    animation: fadeIn 0.1s ease-in-out forwards;
+    opacity: 0;
+}
+  
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-out {
+    animation: fadeOut 2s ease-in-out forwards;
+    opacity: 1;
+}
+  
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
 }
 
 /* Landing Modal */
@@ -117,7 +148,7 @@ button:hover {
 }
   
 #letter {
-    animation: fall 1s cubic-bezier(0.3, 0.1, 0.2, 1) forwards;
+    animation: fall 0.1s cubic-bezier(0.3, 0.1, 0.2, 1) forwards;
     margin: 0 0.4vw;
 }
 
@@ -131,6 +162,11 @@ button:hover {
 }
 
 /* Navigation Bar */
+#nav-trigger {
+    width: 20vw;
+    height: 1vw;
+}
+
 #nav-bar {
     position: fixed;
     top: 1%;
@@ -159,9 +195,79 @@ button:hover {
 }
 
 /* About Section */
-#about {
-    padding: 5vw;
-    gap: 5vw;
+#about-wrapper{
+    padding: 6vw;
+    gap: 3vw;
+}
+
+#profile-image {
+    width: 30vw;
+    height: 30vw;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+#bio-wrapper {
+    width: 40vw;
+}
+
+/* #bio {
+    In case some text changes need to be made
+} */
+
+/* Project Section */
+#projects-wrapper {
+
+}
+
+#projects-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vw;
+    margin: 3vh;
+}
+
+#projects-container > div {
+    padding: 1vw;
+    height: auto;
+    gap: 1vh;
+    background-color: #F5EFE8;
+    border: solid #F5EFE8 1px; 
+    border-radius: 10px;
+}
+
+#projects-container > div > button {
+    background-color: #DFD9D3;
+    border-radius: 4px;
+    border: 1.5px solid #F5EFE8;
+}
+
+#projects-container > div > button:hover {
+    background-color: #F5EFE8;
+    border: 1.5px solid #696663;
+}
+
+#pomodoro-timer > img {
+    width: 20vw;
+    height: auto;
+    border-radius: 3%;
+}
+
+#messenger > img {
+    width: 20vw;
+    height: auto;
+    border-radius: 3%;
+}
+
+#wordle > img {
+    width: 20vw;
+    height: auto;
+    border-radius: 3%;
+}
+
+#coming-soon {
+    width: 20vw;
 }
 
 
@@ -171,12 +277,8 @@ button:hover {
 
 
 
-
-
-
-
 /* Nonce */
-.flex {
+/* .flex {
     display: flex;
 }
 
@@ -200,78 +302,12 @@ button:hover {
 
 .links:hover {
     transition-duration: 400ms;
-}
-
-#vertical-divider {
-    width: 0.125vw;
-    height: 4vh; 
-    background-color: #696663;
-}
-
-
-#navigation-buttons {
-    margin-right: 0.5vw;
-    visibility: hidden;
-    transition: opacity 0.5s ease-out;
-}
-/* 
-#navigation-bar button {
-    background: rgba(255, 255, 255, 0.5);
-    border: none;
-}
-
-#navigation-bar button h5 {
-    align-self: center;
 } */
-
-/* Might need to change these */
-#about-button {
-    min-width: 53px;
-}
-
-
-
-
-
-
-
 
 /* About Section */
 
 
-#profile-image > img {
-    width: 20vw;
-    height: 20vw;
-    overflow: hidden;
-    border-radius: 50%;
-}
 
-#about-me {
-    max-width: 30vw;
-}
-
-#social-links {
-    margin-top: 3vh;
-    gap: 1vw;
-}
-/* 
-#social-links > button {
-    background-color: #DFD9D3;
-    min-width: 130px;
-    border-radius: 4px;
-    border: 1.5px solid #F5EFE8;
-}
-
-#social-links > button:hover {
-    background-color: #F5EFE8;
-    border: 1.5px solid #696663;
-}
-
-#social-links > button > img {
-    width: 1.5vw;
-    min-width: 20px;
-    height: auto;
-} */
 
 /* Projects Section */
 #projects {
@@ -332,34 +368,7 @@ button:hover {
 }
 
 /* Animations */
-.fade-in {
-    animation: fadeIn 2s ease-in-out forwards;
-    opacity: 0;
-}
-  
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
 
-.fade-out {
-    animation: fadeOut 2s ease-in-out forwards;
-    opacity: 1;
-}
-  
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        display: none;
-    }
-}
 
 .slide-in-left {
     animation: slide-left 3s cubic-bezier(0.3, 0.1, 0.2, 1) forwards;

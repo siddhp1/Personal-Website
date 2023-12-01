@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Navigation Bar
     const navigationBar = document.querySelector('#nav-bar')
+    const navTrigger = document.querySelector('#nav-trigger');
 
     // FIGURE OUT WHEN ANIMATION ENDS AND HOW TO DO THIS
     // Detect when the sliding animation finishes
@@ -36,6 +37,26 @@ document.addEventListener("DOMContentLoaded", () => {
         navigationBar.classList.remove('hidden');
         navigationBar.classList.add('fade-in');
     });
+
+    // window.addEventListener('scroll', function() {
+    //     if (window.scrollY > '2vw') { // Adjust the scroll threshold as needed
+    //         navigationBar.style.top = '1%'; // Show the navigation bar
+    //     } else {
+    //         navigationBar.style.top = '-100px'; // Hide the navigation bar
+    //     }
+    // });
+
+    // navTrigger.addEventListener('mouseenter', function() {
+    //     if (window.scrollY > 100) {
+    //         navigationBar.style.top = '1%'; // Show the navigation bar when hovered
+    //     }
+    // });
+
+    // navigationBar.addEventListener('mouseleave', function() {
+    //     if (window.scrollY > 100) {
+    //         navigationBar.style.top = '-100px'; // Hide the navigation bar when the cursor leaves
+    //     }
+    // });
 
     // Nav button links 
     const projectsButton = document.querySelector('#projects-button');
