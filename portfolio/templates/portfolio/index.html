@@ -1,0 +1,131 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/styles.css' %}">
+    <script type="text/javascript" src="{% static 'portfolio/index.js' %}" defer></script>
+    <title>Siddh Patel - Portfolio</title>
+</head>
+<body>
+    <!-- Landing Modal-->
+    <div id="animation-modal" class="modal">
+        <div class="modal-content">
+            <div class="flex-center" id="word-container">
+                <div id="letter">S</div>
+                <div id="letter">i</div>
+                <div id="letter">d</div>
+                <div id="letter">d</div>
+                <div id="letter">h</div>
+                <div id="letter">&nbsp;</div>
+                <div id="letter">P</div>
+                <div id="letter">a</div>
+                <div id="letter">t</div>
+                <div id="letter">e</div>
+                <div id="letter">l</div>
+            </div>
+            <div class="flex-center flex-column">
+                <h3 class="hidden margin-small" id="welcome-message">Welcome to My Website!</h3>
+                <button class="hidden flex-center" id="enter-button">
+                    <h3>Enter</h3>
+                </button>
+            </div>
+        </div>
+    </div>    
+    <main>
+        <div class="flex-center flex-column">
+            <!-- Navigation Bar Components -->
+            <div class="hidden flex-center" id="nav-bar">
+                <button class="nav-button flex-center" id="projects-button">
+                    <img src="{% static 'portfolio/media/github-logo.png' %}" alt="GitHub Logo"/>
+                    <h3>LinkedIn</h3>
+                </button>
+                <div class="vertical-divider"></div>
+                <button class="nav-button flex-center" id="linkedin-button">
+                    <img src="{% static 'portfolio/media/linkedin-logo.png' %}" alt="GitHub Logo"/>
+                    <h3>LinkedIn</h3>
+                </button>
+                <div class="vertical-divider"></div>
+                <button class="nav-button flex-center" id="github-button">
+                    <img src="{% static 'portfolio/media/github-logo.png' %}" alt="LinkedIn Logo"/>
+                    <h3>GitHub</h3>
+                </button>
+            </div>
+    
+            <!-- About Section Components -->
+            <div class="flex-center" id="about">
+                <!-- Profile Image (Left)-->
+                <div class="flex-center" id="profile-image">
+                    <img src="{% static 'portfolio/media/profile-image.jpg' %}">
+                </div>
+                <!-- About Me (Right) -->
+                <div class="flex-column" id="about-me">
+                    <h1>About Me</h1>
+                    <p>Hello there! My name is Siddh Patel and I am a highschool student. This website is a portfolio showing all of my completed projects. The links to my LinkedIn and GitHub profiles are below.</p>
+                    <!-- Social Media Links -->
+                </div>
+            </div>
+
+            <div class="flex-center" id="about">
+                <!-- Profile Image (Left)-->
+                <div class="flex-center" id="profile-image">
+                    <img src="{% static 'portfolio/media/profile-image.jpg' %}">
+                </div>
+                <!-- About Me (Right) -->
+                <div class="flex-column" id="about-me">
+                    <h1>About Me</h1>
+                    <p>Hello there! My name is Siddh Patel and I am a highschool student. This website is a portfolio showing all of my completed projects. The links to my LinkedIn and GitHub profiles are below.</p>
+                    <!-- Social Media Links -->
+                </div>
+            </div>
+
+            <div class="flex-center" id="about">
+                <!-- Profile Image (Left)-->
+                <div class="flex-center" id="profile-image">
+                    <img src="{% static 'portfolio/media/profile-image.jpg' %}">
+                </div>
+                <!-- About Me (Right) -->
+                <div class="flex-column" id="about-me">
+                    <h1>About Me</h1>
+                    <p>Hello there! My name is Siddh Patel and I am a highschool student. This website is a portfolio showing all of my completed projects. The links to my LinkedIn and GitHub profiles are below.</p>
+                    <!-- Social Media Links -->
+                </div>
+            </div>
+
+            <div class="flex-center" id="about">
+                <!-- Profile Image (Left)-->
+                <div class="flex-center" id="profile-image">
+                    <img src="{% static 'portfolio/media/profile-image.jpg' %}">
+                </div>
+                <!-- About Me (Right) -->
+                <div class="flex-column" id="about-me">
+                    <h1>About Me</h1>
+                    <p>Hello there! My name is Siddh Patel and I am a highschool student. This website is a portfolio showing all of my completed projects. The links to my LinkedIn and GitHub profiles are below.</p>
+                    <!-- Social Media Links -->
+                </div>
+            </div>
+
+            
+    
+            <!-- Project Section Components -->
+            {% comment %} <div class="flex-column-center" id="projects">
+                <div class="flex-center">
+                    <h1>My Projects</h1>
+                </div>
+                <div class="grid" id="projects-container">
+                    {% for project in projects %}
+                        <div class="project-item">
+                            <h2>{{ project.title }}</h2>
+                            <p>{{ project.description }}</p>
+                            <img src="{% static 'portfolio/media/'|add:project.thumbnail %}">
+                            <!-- You can add a button or any additional elements here -->
+                            <!-- <button id="{{ project.title }}-portfolio-item-id">Learn More</button> -->
+                        </div>
+                    {% endfor %}
+                </div>
+            </div> {% endcomment %}
+        </div>
+    </main>
+</body>
+</html>
