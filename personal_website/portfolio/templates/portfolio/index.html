@@ -36,20 +36,17 @@
     <main>
         <div class="flex-center flex-column">
             <!-- Navigation Bar Components -->
-            <div id="nav-trigger"></div>
-            <div class="hidden flex-center" id="nav-bar">
+            <div class="flex-center" id="nav-bar">
                 <button class="nav-button flex-center" id="projects-button">
-                    <img src="{% static 'portfolio/media/github-logo.png' %}" alt="Projects Icon"/>
+                    <img src="{% static 'portfolio/media/projects-icon.png' %}" alt="Projects Icon"/>
                     <h3>Projects</h3>
                 </button>
-                <div class="vertical-divider"></div>
                 <button class="nav-button flex-center" id="linkedin-button">
-                    <img src="{% static 'portfolio/media/linkedin-logo.png' %}" alt="GitHub Logo"/>
+                    <img src="{% static 'portfolio/media/linkedin-logo.png' %}" alt="LinkedIn Logo"/>
                     <h3>LinkedIn</h3>
                 </button>
-                <div class="vertical-divider"></div>
                 <button class="nav-button flex-center" id="github-button">
-                    <img src="{% static 'portfolio/media/github-logo.png' %}" alt="LinkedIn Logo"/>
+                    <img src="{% static 'portfolio/media/github-logo.png' %}" alt="Github Logo"/>
                     <h3>GitHub</h3>
                 </button>
             </div>
@@ -59,35 +56,42 @@
                 <img id="profile-image" src="{% static 'portfolio/media/profile-image.jpg' %}">
                 <div class="flex-column flex-center" id="bio-wrapper">
                     <h1>About Me</h1>
-                    <p id="bio">Hello there! My name is Siddh Patel and I am a highschool student. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla facilisi morbi tempus iaculis urna id volutpat. Quis ipsum suspendisse ultrices gravida dictum fusce ut placerat orci. Donec et odio pellentesque diam volutpat commodo sed egestas egestas. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Elementum eu facilisis sed odio morbi quis commodo odio. Nec nam aliquam sem et tortor consequat. Urna id volutpat lacus laoreet non curabitur. Nec ullamcorper sit amet risus nullam eget felis eget. Morbi blandit cursus risus at. Scelerisque mauris pellentesque pulvinar pellentesque. Mauris cursus mattis molestie a iaculis at. Duis at consectetur lorem donec massa sapien faucibus et molestie.</p>
+                    <p id="bio">{{ bio_text }}</p>
+                    <div class="margin-small" id="scroll-point"></div>
                 </div>
             </div>
 
             <!-- Project Section Components -->
             <div class="flex-column flex-center" id="projects-wrapper">
-                
-                <div class="flex-column flex-center">
+                <div class="flex-column flex-center" id="projects-header-wrapper">
                     <h1>My Projects</h1>
-                    <h3>A portfolio of all my work</h3>
+                    <h3>A portfolio of all my work. Click a project to learn more.</h3>
                 </div>
 
-                <div class="grid" id="projects-container">
+                <div id="projects-grid-wrapper">
                     {% for project in projects %}
-                        <div class="project-item">
+                        <button class="project-item flex-column flex-center flex-space-between" id="{{ project.id }}">
                             <h2>{{ project.title }}</h2>
-                            <p>{{ project.description }}</p>
-                            <img src="{% static 'portfolio/media/'|add:project.thumbnail %}">
-                            <!-- You can add a button or any additional elements here -->
-                            <!-- <button id="{{ project.title }}-portfolio-item-id">Learn More</button> -->
-                        </div>
+                            <h4>{{ project.short_desc }}</h4>
+                            <img class="project-image" src="{% static 'portfolio/media/'|add:project.thumbnail %}">
+                        </button>
                     {% endfor %}
                 </div>
-
-
             </div>
-
-
         </div>
     </main>
+    <div class="modal not-rendered" id="project-modal">
+        <div class="modal-content" id="project-modal-content">
+            <div class="flex-center flex-column" id="project-container">
+                <h1 id="project-title"></h1>
+                    <div id="iframe-container"></div>
+                    <p id="project-desc"></p>
+                    <button class="flex-center" id="project-repo-button">
+                        <h3>GitHub Repository</h3>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div> 
 </body>
 </html>

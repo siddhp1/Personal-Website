@@ -7,6 +7,7 @@ class Project(models.Model):
     short_desc = models.CharField(max_length=100)
     long_desc = models.CharField(max_length=300)
     thumbnail = models.CharField(max_length=100)
+    demo_url = models.URLField(null=True, default=None)
     repo_url = models.URLField()
     
     def __str__(self):
