@@ -300,9 +300,9 @@ button:hover {
 
 .project-item {
     width: 40vw;
-    height: 28vw;
+    height: 29vw;
     padding: 1vw;
-    gap: 0.2vw;
+    gap: 0.3vw;
     background-color: #DFD9D3;
     border: none; 
     border-radius: 3%;
