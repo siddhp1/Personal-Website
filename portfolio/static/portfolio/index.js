@@ -119,14 +119,16 @@ function showProjectModal(project) {
     var projectDesc = document.querySelector('#project-desc');
     projectDesc.textContent = project.long_desc;
 
-    var iframe = document.createElement('iframe');
-    iframe.id = 'embedded-site';
-    iframe.title = 'Demonstration of project';
-    iframe.allowFullscreen = true;
-    iframe.frameBorder = 0;
-    iframe.src = project.demo_url;
-    var iframeContainer = document.getElementById('iframe-container');
-    iframeContainer.appendChild(iframe);
+    if (project.demo_url != null) {
+        var iframe = document.createElement('iframe');
+        iframe.id = 'embedded-site';
+        iframe.title = 'Demonstration of project';
+        iframe.allowFullscreen = true;
+        iframe.frameBorder = 0;
+        iframe.src = project.demo_url;
+        var iframeContainer = document.getElementById('iframe-container');
+        iframeContainer.appendChild(iframe);
+    }
 
     var repoButton = document.querySelector('#project-repo-button'); 
     repoButton.addEventListener('click', () => {
@@ -135,7 +137,9 @@ function showProjectModal(project) {
 
     window.onclick = function(event) {
         if (event.target == projectModal) {
-            iframe.remove();
+            if (project.demo_url != null) {
+                iframe.remove();
+            }
             projectModal.classList.add('not-rendered');
         }
     }

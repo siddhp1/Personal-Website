@@ -3,7 +3,6 @@ from .models import Project
 from .serializers import ProjectSerializer
 from rest_framework import generics
 
-# Create your views here.
 bio_text = """Hello there and welcome to my personal website! My name is Siddh Patel and I am a grade 12 student from Ontario, Canada. I am very passionate about programming and I love to make projects and learn different languages, frameworks, and libraries. Below are a couple of my favorite passion projects. Be sure to check out my socials! Thank you for visiting!"""
 
 def index(request):
