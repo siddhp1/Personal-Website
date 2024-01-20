@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/styles.css' %}">
-    <script type="text/javascript" src="{% static 'portfolio/index.js' %}" defer></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <script type="text/javascript" src="{% static 'js/index.js' %}" defer></script>
     <title>Siddh Patel - Portfolio</title>
 </head>
 <body>
@@ -38,22 +38,22 @@
             <!-- Navigation Bar Components -->
             <div class="flex-center" id="nav-bar">
                 <button class="nav-button flex-center" id="projects-button">
-                    <img src="{% static 'portfolio/media/projects-icon.png' %}" alt="Projects Icon"/>
+                    <img src="{% static 'media/projects-icon.png' %}" alt="Projects Icon"/>
                     <h3>Projects</h3>
                 </button>
                 <button class="nav-button flex-center" id="linkedin-button">
-                    <img src="{% static 'portfolio/media/linkedin-logo.png' %}" alt="LinkedIn Logo"/>
+                    <img src="{% static 'media/linkedin-logo.png' %}" alt="LinkedIn Logo"/>
                     <h3>LinkedIn</h3>
                 </button>
                 <button class="nav-button flex-center" id="github-button">
-                    <img src="{% static 'portfolio/media/github-logo.png' %}" alt="Github Logo"/>
+                    <img src="{% static 'media/github-logo.png' %}" alt="Github Logo"/>
                     <h3>GitHub</h3>
                 </button>
             </div>
     
             <!-- About Section Components -->
             <div class="flex-column flex-center" id="about-wrapper">
-                <img id="profile-image" src="{% static 'portfolio/media/profile-image.jpg' %}">
+                <img id="profile-image" src="{% static '/media/profile-image.jpg' %}">
                 <div class="flex-column flex-center" id="bio-wrapper">
                     <h1>About Me</h1>
                     <p id="bio">{{ bio_text }}</p>
@@ -73,7 +73,7 @@
                         <button class="project-item flex-column flex-center flex-space-between" id="{{ project.id }}">
                             <h2>{{ project.title }}</h2>
                             <h4>{{ project.short_desc }}</h4>
-                            <img class="project-image" src="{% static 'portfolio/media/'|add:project.thumbnail %}">
+                            <img class="project-image" src="{% static '/media/'|add:project.thumbnail %}">
                         </button>
                     {% endfor %}
                 </div>
