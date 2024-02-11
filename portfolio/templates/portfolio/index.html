@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <script type="text/javascript" src="{% static 'js/index.js' %}" defer></script>
+    <title>Siddh Patel - Portfolio</title>
+</head>
+<body>
+    <!-- Landing Modal-->
+    <div id="animation-modal" class="modal">
+        <div class="modal-content">
+            <div class="flex-center" id="word-container">
+                <div id="letter">S</div>
+                <div id="letter">i</div>
+                <div id="letter">d</div>
+                <div id="letter">d</div>
+                <div id="letter">h</div>
+                <div id="letter">&nbsp;</div>
+                <div id="letter">P</div>
+                <div id="letter">a</div>
+                <div id="letter">t</div>
+                <div id="letter">e</div>
+                <div id="letter">l</div>
+            </div>
+            <div class="flex-center flex-column">
+                <h3 class="hidden margin-small" id="welcome-message">Welcome to My Website!</h3>
+                <button class="hidden flex-center" id="enter-button">
+                    <h3>Enter</h3>
+                </button>
+            </div>
+        </div>
+    </div>    
+    <main>
+        <div class="flex-center flex-column">
+            <!-- Navigation Bar Components -->
+            <div class="flex-center" id="nav-bar">
+                <button class="nav-button flex-center" id="projects-button">
+                    <img src="{% static 'media/projects-icon.png' %}" alt="Projects Icon"/>
+                    <h3>Projects</h3>
+                </button>
+                <button class="nav-button flex-center" id="linkedin-button">
+                    <img src="{% static 'media/linkedin-logo.png' %}" alt="LinkedIn Logo"/>
+                    <h3>LinkedIn</h3>
+                </button>
+                <button class="nav-button flex-center" id="github-button">
+                    <img src="{% static 'media/github-logo.png' %}" alt="Github Logo"/>
+                    <h3>GitHub</h3>
+                </button>
+            </div>
+    
+            <!-- About Section Components -->
+            <div class="flex-column flex-center" id="about-wrapper">
+                <img id="profile-image" src="{% static '/media/profile-image.jpg' %}">
+                <div class="flex-column flex-center" id="bio-wrapper">
+                    <h1>About Me</h1>
+                    <p id="bio">{{ bio_text }}</p>
+                    <div class="margin-small" id="scroll-point"></div>
+                </div>
+            </div>
+
+            <!-- Project Section Components -->
+            <div class="flex-column flex-center" id="projects-wrapper">
+                <div class="flex-column flex-center" id="projects-header-wrapper">
+                    <h1>My Projects</h1>
+                    <h3>A portfolio of all my work. Click a project to learn more!</h3>
+                </div>
+
+                <div id="projects-grid-wrapper">
+                    {% for project in projects %}
+                        <button class="project-item flex-column flex-center flex-space-between" id="{{ project.id }}">
+                            <h2>{{ project.title }}</h2>
+                            <h4>{{ project.short_desc }}</h4>
+                            <img class="project-image" src="{% static '/media/'|add:project.thumbnail %}">
+                        </button>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="modal not-rendered" id="project-modal">
+        <div class="modal-content" id="project-modal-content">
+            <div class="flex-center flex-column" id="project-container">
+                <h1 id="project-title"></h1>
+                    <div id="iframe-container"></div>
+                    <h6 id="project-desc"></h6>
+                    <button class="flex-center" id="project-repo-button">
+                        <h3>GitHub Repository</h3>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div> 
+</body>
+</html>
