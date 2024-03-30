@@ -3,7 +3,7 @@ from .models import Project
 from .serializers import ProjectSerializer
 from rest_framework import generics
 
-bio_text = """Hello there, and welcome to my personal website! My name is Siddh Patel and I am a grade 12 student from Canada. I am very passionate about programming and I love to make projects and learn different languages, frameworks, and libraries. Below are some of my favorite projects. Be sure to check out my LinkedIn and GitHub! Thank you for visiting!"""
+bio_text = """Welcome to my developer portfolio website! I'm Siddh Patel, a driven Grade 12 student hailing from the vibrant tech landscape of Canada. Immersed in the dynamic realm of programming, I find joy in crafting innovative projects while continually expanding my repertoire of languages, frameworks, and libraries. Below, you'll discover a curated selection of my favourite projects. Don't forget to explore my LinkedIn and GitHub profiles for more insights into my journey. Thank you for stopping by!"""
 
 def index(request):
     projects = Project.objects.values('id', 'position', 'title', 'short_desc', 'thumbnail', 'repo_url')
