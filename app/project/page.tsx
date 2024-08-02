@@ -2,9 +2,9 @@ import Image from "next/image";
 
 import Header from "@/components/Header";
 
-export default async function Home() {
-  // const data = await getData();
-  // console.log(data.fields);
+export default async function Projects() {
+  const data = await getProjects();
+  console.log(data.items[0].fields);
   // const imageData = await getImage();
 
   // if (!imageData) {
@@ -31,9 +31,9 @@ export default async function Home() {
 }
 
 // This is how we get anything that is text based.
-async function getData() {
+async function getProjects() {
   const res = await fetch(
-    `https://cdn.contentful.com/spaces/${process.env.CONTENTFUL_SPACE_ID}/environments/master/entries/${process.env.GENERAL_ENTRY_ID}`,
+    `https://cdn.contentful.com/spaces/${process.env.CONTENTFUL_SPACE_ID}/environments/master/entries?content_type=project`,
     {
       headers: {
         Authorization: `Bearer ${process.env.CONTENTFUL_ACCESS_TOKEN}`,
@@ -47,22 +47,4 @@ async function getData() {
 
   const data = await res.json();
   return data;
-}
-
-async function getImage() {
-  const res = await fetch(
-    `https://cdn.contentful.com/spaces/${process.env.CONTENTFUL_SPACE_ID}/environments/master/assets/`,
-    {
-      headers: {
-        Authorization: `Bearer ${process.env.CONTENTFUL_ACCESS_TOKEN}`,
-      },
-    }
-  );
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
-
-  const data = await res.json();
-  return data.fields.file;
 }
