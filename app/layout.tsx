@@ -46,7 +46,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        // doing this for now, will see if its convention later
         className={`bg-light-2 dark:bg-dark-2 min-h-screen ${IBMPlexMono.className}`}
       >
         {children}
