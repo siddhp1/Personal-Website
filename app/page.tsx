@@ -8,10 +8,23 @@ import ExperienceList from "@/components/home/experience/ExperienceList";
 
 import getProjects from "@/components/api/FetchProjects";
 import getGeneral from "@/components/api/FetchGeneral";
+import getExperiences from "@/components/api/FetchExperiences";
 
 export default async function Home() {
-  const projects = await getProjects();
-  const general = await getGeneral();
+  // Fetch to memoize all
+  const experiencesData = getExperiences();
+  const projectsData = getProjects();
+  const generalData = getGeneral();
+
+  const [general, projects, experiences] = await Promise.all([
+    generalData,
+    projectsData,
+    experiencesData,
+  ]);
+
+  // const experiences = await getExperiences();
+  // const projects = await getProjects();
+  // const general = await getGeneral();
 
   return (
     <>
