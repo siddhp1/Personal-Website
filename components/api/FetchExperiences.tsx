@@ -20,7 +20,7 @@ export interface Experience {
 const getExperiences = async (): Promise<Experience[]> => {
   const response = await client.getEntries({
     content_type: "experience",
-    order: "-fields.endDate",
+    order: ["-fields.endDate"],
   });
 
   const experiences = response.items.map((item: any) => {

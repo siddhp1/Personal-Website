@@ -16,7 +16,7 @@ export interface Project {
 const getProjects = async () => {
   const response = await client.getEntries({
     content_type: "project",
-    order: `fields.order`,
+    order: ["fields.order"],
   });
 
   const projects = response.items.map((item: any) => {

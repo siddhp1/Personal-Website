@@ -81,7 +81,7 @@ const ExperienceElement = ({
                 <p className="">
                   @ {experience.useLogoAsName ? null : experience.company}
                 </p>
-                {experience.hasLogo ? (
+                {experience.hasLogo && experience.logo ? (
                   <Image
                     src={experience.logo}
                     width="100"
