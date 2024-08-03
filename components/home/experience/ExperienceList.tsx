@@ -1,9 +1,13 @@
-import getExperiences, { Experience } from "../../api/FetchExperiences";
+import { Experience } from "../../api/FetchExperiences";
 import ExperienceElement from "./ExperienceElement";
 
-export default async function ExperienceList() {
-  const experiences = await getExperiences();
+interface ExperienceListProps {
+  experiences: Experience[];
+}
 
+export default async function ExperienceList({
+  experiences,
+}: ExperienceListProps) {
   return (
     <>
       <div className="flex flex-col lg:flex-row mx-6 md:mx-20 xl:mx-40 my-32">

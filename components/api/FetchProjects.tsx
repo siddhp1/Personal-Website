@@ -1,3 +1,4 @@
+import { cache } from "react";
 import client from "./Client";
 
 export interface Project {
@@ -13,7 +14,7 @@ export interface Project {
   repoUrl?: string;
 }
 
-const getProjects = async () => {
+const fetchProjects = async () => {
   const response = await client.getEntries({
     content_type: "project",
     order: ["fields.order"],
@@ -37,5 +38,7 @@ const getProjects = async () => {
 
   return projects;
 };
+
+const getProjects = cache(fetchProjects);
 
 export default getProjects;

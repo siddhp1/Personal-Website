@@ -1,3 +1,4 @@
+import { cache } from "react";
 import { Entry } from "contentful";
 
 import client from "./Client";
@@ -9,9 +10,11 @@ if (!entryId) {
   throw new Error("Contentful entryId must be provided.");
 }
 
-const getGeneral = async () => {
+const fetchGeneral = async () => {
   const response: Entry<any> = await client.getEntry(entryId);
   return response.fields;
 };
+
+const getGeneral = cache(fetchGeneral);
 
 export default getGeneral;

@@ -1,3 +1,4 @@
+import { cache } from "react";
 import client from "./Client";
 
 export interface Experience {
@@ -17,7 +18,7 @@ export interface Experience {
   imageDimensions: { width: number; height: number };
 }
 
-const getExperiences = async (): Promise<Experience[]> => {
+const fetchExperiences = async (): Promise<Experience[]> => {
   const response = await client.getEntries({
     content_type: "experience",
     order: ["-fields.endDate"],
@@ -45,5 +46,7 @@ const getExperiences = async (): Promise<Experience[]> => {
 
   return experiences;
 };
+
+const getExperiences = cache(fetchExperiences);
 
 export default getExperiences;

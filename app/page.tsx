@@ -11,7 +11,7 @@ import getGeneral from "@/components/api/FetchGeneral";
 import getExperiences from "@/components/api/FetchExperiences";
 
 export default async function Home() {
-  // Fetch to memoize all
+  // Parallel fetch
   const experiencesData = getExperiences();
   const projectsData = getProjects();
   const generalData = getGeneral();
@@ -22,10 +22,6 @@ export default async function Home() {
     experiencesData,
   ]);
 
-  // const experiences = await getExperiences();
-  // const projects = await getProjects();
-  // const general = await getGeneral();
-
   return (
     <>
       <Header />
@@ -33,7 +29,7 @@ export default async function Home() {
       <About />
       <ProjectSwiper projects={projects} />
       {general.showExperience ? (
-        <ExperienceList />
+        <ExperienceList experiences={experiences} />
       ) : (
         <div className="h-32"></div>
       )}
