@@ -4,9 +4,25 @@ import { FaExternalLinkAlt, FaArrowDown } from "react-icons/fa";
 
 import getGeneral from "../api/FetchGeneral";
 
+interface ProfileImage {
+  fields: {
+    file: {
+      url: string;
+    };
+  };
+}
+
+function isProfileImage(profileImage: any): profileImage is ProfileImage {
+  return (
+    profileImage && typeof profileImage === "object" && "fields" in profileImage
+  );
+}
+
 export default async function Hero() {
   const data = await getGeneral();
-  const imageUrl = `https:${data.profileImage?.fields?.file.url}`;
+  const imageUrl = isProfileImage(data.profileImage)
+    ? `https:${data.profileImage.fields.file.url}`
+    : "";
 
   return (
     <>
@@ -25,7 +41,7 @@ export default async function Hero() {
           {/* Button on larger screens */}
           <p className="hidden md:block md:text-2xl xl:text-4xl text-light-9 dark:text-dark-9">
             I am Siddh, an aspiring software engineer, <br /> incoming
-            {data.showHeadlineLink ? (
+            {data.showHeadlineLink && typeof data.headlineLink === "string" ? (
               <span>
                 <a
                   href={data.headlineLink}

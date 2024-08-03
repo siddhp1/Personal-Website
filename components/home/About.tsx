@@ -1,11 +1,25 @@
 import { FaExternalLinkAlt } from "react-icons/fa";
 
+interface Resume {
+  fields: {
+    file: {
+      url: string;
+    };
+  };
+}
+
 import getGeneral from "@/components/api/FetchGeneral";
+function isResume(resume: any): resume is Resume {
+  return resume && typeof resume === "object" && "fields" in resume;
+}
 
 export default async function About() {
   const data = await getGeneral();
 
-  const resumeUrl = `https:${data.resume?.fields?.file.url}`;
+  // Type guard to check if data.resume has fields property
+  const resumeUrl = isResume(data.resume)
+    ? `https:${data.resume.fields.file.url}`
+    : "";
 
   return (
     <>
