@@ -13,7 +13,7 @@ const Error = () => {
           Something went wrong.
         </h1>
         <p className="text-light-7 dark:text-dark-7 my-2">
-          That wasn't supposed to happen.
+          That was not supposed to happen.
         </p>
         <Link href="/">
           <div className="flex items-center gap-3 rounded-xl px-2 py-1 text-xl text-light-9 dark:text-dark-9 hover:bg-light-3 dark:hover:bg-dark-3 duration-200">
