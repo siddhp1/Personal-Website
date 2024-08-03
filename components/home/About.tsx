@@ -14,13 +14,13 @@ export default async function About() {
           About Me
         </h1>
         <p className="mt-1.25 lg:ml-6 text-lg text-light-9 dark:text-dark-9">
-          I'm a tech enthusiast based in Canada, focused on developing
+          I&apos;m a tech enthusiast based in Canada, focused on developing
           innovative projects and expanding my expertise across various
           languages, frameworks, and technologies.
           <br />
           <br />
-          I'm always open to connect with like-minded individuals, explore new
-          opportunities, and learn new things. Feel free to reach out!
+          I&apos;m always open to connect with like-minded individuals, explore
+          new opportunities, and learn new things. Feel free to reach out!
           <br />
           <br />
           Check out my projects below
