@@ -2,34 +2,17 @@ import Image from "next/image";
 
 import { FaExternalLinkAlt, FaArrowDown } from "react-icons/fa";
 
-import getGeneral from "../api/FetchGeneral";
+import getGeneral from "@/components/data/generalData";
 
-interface ProfileImage {
-  fields: {
-    file: {
-      url: string;
-    };
-  };
-}
-
-function isProfileImage(profileImage: any): profileImage is ProfileImage {
-  return (
-    profileImage && typeof profileImage === "object" && "fields" in profileImage
-  );
-}
-
-export default async function Hero() {
-  const data = await getGeneral();
-  const imageUrl = isProfileImage(data.profileImage)
-    ? `https:${data.profileImage.fields.file.url}`
-    : "";
+export default function Hero() {
+  const data = getGeneral();
 
   return (
     <>
       <div className="flex flex-col">
         <div className="flex justify-center h-90 md:h-96 my-8 md:my-16 mx-6">
           <Image
-            src={imageUrl}
+            src={data.profileImage}
             width={1000}
             height={1000}
             alt="Profile picture"

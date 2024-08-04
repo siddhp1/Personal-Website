@@ -1,13 +1,11 @@
-import { Experience } from "../../api/FetchExperiences";
+import { Experience } from "@/components/data/experienceData";
 import ExperienceElement from "./ExperienceElement";
 
 interface ExperienceListProps {
   experiences: Experience[];
 }
 
-export default async function ExperienceList({
-  experiences,
-}: ExperienceListProps) {
+export default function ExperienceList({ experiences }: ExperienceListProps) {
   return (
     <>
       <div className="flex flex-col lg:flex-row mx-6 md:mx-20 xl:mx-40 my-32">

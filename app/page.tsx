@@ -6,21 +6,14 @@ import About from "@/components/home/About";
 import ProjectSwiper from "@/components/home/ProjectSwiper";
 import ExperienceList from "@/components/home/experience/ExperienceList";
 
-import getProjects from "@/components/api/FetchProjects";
-import getGeneral from "@/components/api/FetchGeneral";
-import getExperiences from "@/components/api/FetchExperiences";
+import getGeneral from "@/components/data/generalData";
+import { getProjects } from "@/components/data/projectData";
+import { getExperiences } from "@/components/data/experienceData";
 
-export default async function Home() {
-  // Parallel fetch
-  const experiencesData = getExperiences();
-  const projectsData = getProjects();
-  const generalData = getGeneral();
-
-  const [general, projects, experiences] = await Promise.all([
-    generalData,
-    projectsData,
-    experiencesData,
-  ]);
+export default function Home() {
+  const general = getGeneral();
+  const projects = getProjects();
+  const experiences = getExperiences();
 
   return (
     <>

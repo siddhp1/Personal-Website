@@ -2,7 +2,7 @@ import Link from "next/link";
 import { FaHome } from "react-icons/fa";
 import Header from "@/components/ui/Header";
 
-const NotFound = () => {
+export default function NotFound() {
   return (
     <>
       <Header />
@@ -22,6 +22,4 @@ const NotFound = () => {
       </div>
     </>
   );
-};
-
-export default NotFound;
+}

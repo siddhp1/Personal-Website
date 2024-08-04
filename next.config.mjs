@@ -7,6 +7,16 @@ const nextConfig = {
         hostname: "images.ctfassets.net",
         pathname: "**",
       },
+      {
+        protocol: "https",
+        hostname: "siddhwebsitestorage.blob.core.windows.net",
+        pathname: "**",
+      },
+      {
+        protocol: "https",
+        hostname: "siddhpersonalwebsite.blob.core.windows.net",
+        pathname: "**",
+      },
     ],
   },
 };

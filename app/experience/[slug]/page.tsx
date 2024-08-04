@@ -2,17 +2,12 @@ import { Fragment } from "react";
 import Image from "next/image";
 import { FaExternalLinkAlt, FaGripLinesVertical } from "react-icons/fa";
 
-import getExperiences from "@/components/api/FetchExperiences";
 import Header from "@/components/ui/Header";
 import Footer from "@/components/ui/Footer";
+import { getExperience } from "@/components/data/experienceData";
 
-export default async function Experience({
-  params,
-}: {
-  params: { slug: number };
-}) {
-  const experiences = await getExperiences();
-  const experience = experiences[params.slug];
+export default function Experience({ params }: { params: { slug: number } }) {
+  const experience = getExperience(params.slug);
 
   // Date logic
   const months = [

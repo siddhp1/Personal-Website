@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { FaGripLinesVertical } from "react-icons/fa";
-import { Experience } from "../../api/FetchExperiences";
+import { Experience } from "../../data/experienceData";
 
 interface ExperienceElementProps {
   experience: Experience;
@@ -10,11 +10,11 @@ interface ExperienceElementProps {
   last: boolean;
 }
 
-const ExperienceElement = ({
+export default function ExperienceElement({
   experience,
   index,
   last,
-}: ExperienceElementProps) => {
+}: ExperienceElementProps) {
   const months = [
     "Jan",
     "Feb",
@@ -103,6 +103,4 @@ const ExperienceElement = ({
       </Link>
     </li>
   );
-};
-
-export default ExperienceElement;
+}

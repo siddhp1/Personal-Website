@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FaHome } from "react-icons/fa";
 import Header from "@/components/ui/Header";
 
-const Error = () => {
+export default function Error() {
   return (
     <>
       <Header />
@@ -24,6 +24,4 @@ const Error = () => {
       </div>
     </>
   );
-};
-
-export default Error;
+}

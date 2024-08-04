@@ -1,25 +1,9 @@
 import { FaExternalLinkAlt } from "react-icons/fa";
 
-interface Resume {
-  fields: {
-    file: {
-      url: string;
-    };
-  };
-}
+import getGeneral from "@/components/data/generalData";
 
-import getGeneral from "@/components/api/FetchGeneral";
-function isResume(resume: any): resume is Resume {
-  return resume && typeof resume === "object" && "fields" in resume;
-}
-
-export default async function About() {
-  const data = await getGeneral();
-
-  // Type guard to check if data.resume has fields property
-  const resumeUrl = isResume(data.resume)
-    ? `https:${data.resume.fields.file.url}`
-    : "";
+export default function About() {
+  const data = getGeneral();
 
   return (
     <>
@@ -43,7 +27,7 @@ export default async function About() {
               <span> or my</span>
               <span>
                 <a
-                  href={resumeUrl}
+                  href={data.resume}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex ml-0.5 rounded-xl pt-2 pb-1 px-2 leading-relaxed whitespace-nowrap hover:bg-light-3 dark:hover:bg-dark-3 duration-200"

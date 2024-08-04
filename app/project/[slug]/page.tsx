@@ -4,15 +4,10 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 import Header from "@/components/ui/Header";
 import Footer from "@/components/ui/Footer";
-import getProjects from "@/components/api/FetchProjects";
+import { getProject } from "@/components/data/projectData";
 
-export default async function Project({
-  params,
-}: {
-  params: { slug: number };
-}) {
-  const projects = await getProjects();
-  const project = projects[params.slug];
+export default function Project({ params }: { params: { slug: number } }) {
+  const project = getProject(params.slug);
 
   return (
     <>
@@ -67,13 +62,19 @@ export default async function Project({
           </p>
           {/* Links */}
           <div className="flex mt-2 gap-2 md:gap-4 text-md text-light-8 dark:text-dark-7">
-            <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
-              <div className="flex items-center gap-2 rounded-xl px-2 py-1 hover:bg-light-3 dark:hover:bg-dark-3 duration-200">
-                <span className="hidden md:inline">Visit</span>
-                GitHub Repo
-                <FaGithub className="size-5" />
-              </div>
-            </a>
+            {project.hasRepo ? (
+              <a
+                href={project.repoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="flex items-center gap-2 rounded-xl px-2 py-1 hover:bg-light-3 dark:hover:bg-dark-3 duration-200">
+                  <span className="hidden md:inline">Visit</span>
+                  GitHub Repo
+                  <FaGithub className="size-5" />
+                </div>
+              </a>
+            ) : null}
             {project.hasDemo ? (
               <a
                 href={project.demoUrl}

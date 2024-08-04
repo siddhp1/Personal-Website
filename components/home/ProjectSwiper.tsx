@@ -7,7 +7,7 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, FreeMode } from "swiper/modules";
 import "swiper/css";
-import { Project } from "../api/FetchProjects";
+import { Project } from "../data/projectData";
 
 interface ProjectSwiperProps {
   projects: Project[];
