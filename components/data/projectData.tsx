@@ -12,48 +12,77 @@ export interface Project {
 }
 
 const projects = [
+  // {
+  //   title: "What To Cook",
+  //   shortDesc: "Full-stack mobile app for home cooks (coming soon)",
+  //   longDesc:
+  //     "COMING SOON$nA desktop application for WAN messaging with others, either through a global chat or direct messages. Has an external server, which can be hosted anywhere in the world, and users can download the client, connect with a server, and message other users connected to the same server. Built with Maven in Java, using Swing as a GUI framework. Features socket programming and multithreading.",
+  //   skills: [
+  //     "Expo",
+  //     "React Native",
+  //     "TypeScript",
+  //     "Django",
+  //     "Azure App Service",
+  //     "Azure PostgreSQL",
+  //     "Azure Blob Storage",
+  //   ],
+  //   thumbnail:
+  //     "https://siddhpersonalwebsite.blob.core.windows.net/images/messenger.png",
+  //   thumbnailDimensions: { width: 1200, height: 900 },
+  //   hasDemo: false,
+  //   hasRepo: false,
+  //   demoUrl: "https://github.com/siddhp1/Messenger",
+  //   repoUrl: "https://github.com/siddhp1/Messenger",
+  // },
+  // {
+  //   title: "Sysfetch",
+  //   shortDesc: "System information fetching",
+  //   longDesc:
+  //     "COMING SOON$nA desktop application for WAN messaging with others, either through a global chat or direct messages. Has an external server, which can be hosted anywhere in the world, and users can download the client, connect with a server, and message other users connected to the same server. Built with Maven in Java, using Swing as a GUI framework. Features socket programming and multithreading.",
+  //   skills: ["C", "CMake"],
+  //   thumbnail:
+  //     "https://siddhpersonalwebsite.blob.core.windows.net/images/messenger.png",
+  //   thumbnailDimensions: { width: 1200, height: 900 },
+  //   hasDemo: false,
+  //   hasRepo: true,
+  //   demoUrl: "https://github.com/siddhp1/Messenger",
+  //   repoUrl: "https://github.com/siddhp1/Messenger",
+  // },
   {
     title: "Culinary Compass",
     shortDesc: "Restaurant tracking and recommendation web app",
     longDesc:
-      "Culinary Compass lets users track restaurant visits by entering the restaurant, visit date, and a rating out of 5 stars, with assistance from the Google Places Autocomplete API. The Foursquare Places API fetches data about the restaurant to build a user profile. Recommendations are made using a Scikit-Learn cosine similarity algorithm based on the user's profile and selected location/radius via Google Maps. Users can generate a year-end PDF report of their favorite restaurants, cuisines, price categories, and dining times, created with ReportLab and Matplotlib, and emailed to them. User information is stored securely in a SQLite database with bcrypt password hashing, and password resets are managed via email. Culinary Compass is deployed on Azure using Nginx, Gunicorn, Supervisor, and secured with TLS via Certbot.",
+      "Culinary Compass lets users track and rate restaurant visits. A user profile is then built using data collected about the restaurants they visit. Recommendations are made using a cosine similarity algorithm comparing the user's profile with restaurants in a selected location.$nUsers can generate a year-end PDF recap of their favorite restaurants, cuisines, price categories, and dining times, created with ReportLab and Matplotlib.$nUser information is stored securely in a SQLite database with bcrypt password hashing. Culinary Compass is deployed on Azure using Nginx, Gunicorn, and Supervisor.",
     skills: [
       "Flask",
       "Scikit-Learn",
+      "ReportLab",
       "Bootstrap",
       "Google Maps Platform",
       "Foursquare Places",
       "Azure Virtual Machine",
+      "Nginx",
     ],
-    thumbnail:
-      "https://siddhpersonalwebsite.blob.core.windows.net/images/culinarycompass.png",
-    thumbnailDimensions: { width: 1200, height: 900 },
+    thumbnail: "/culinarycompass.png",
+    thumbnailDimensions: { width: 2800, height: 2100 },
     hasDemo: true,
     hasRepo: true,
     demoUrl: "https://culinarycompass.live/",
     repoUrl: "https://github.com/siddhp1/Culinary-Compass",
   },
   {
-    title: "Personal Website",
-    shortDesc: "Full-stack personal website",
+    title: "Face Mask Detector",
+    shortDesc: "Convolutional neural network for detecting face masks",
     longDesc:
-      "This personal portfolio website is a place for me to display my favourite projects and share my social accounts. This website is built with the Django framework and vanilla HTML, CSS, and JavaScript on the frontend. Hosted on a Heroku Dyno, using an AWS S3 bucket to serve static files, and a PostgreSQL database, also hosted on Heroku, to store project information. A REST API is used to send information to the client. Secured with TLS encryption.",
-    skills: [
-      "Django",
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Heroku Dyno",
-      "AWS S3",
-      "PostgreSQL",
-    ],
+      "A face mask detector for verifying that a person is wearing a face mask correctly (over mouth and nose). Has two categories: “with mask” and “without mask”. Classification is done with a convolutional neural network, made with Tensorflow Keras. Demo GUI uses OpenCV and the HaarCascade Frontal Face model to apply the face mask model to camera input. Features a data augmentation engine and MatPlotLib training visualization.",
+    skills: ["Python", "Tensorflow", "OpenCV"],
     thumbnail:
-      "https://siddhpersonalwebsite.blob.core.windows.net/images/personalwebsite.png",
+      "https://siddhpersonalwebsite.blob.core.windows.net/images/facemaskdetector.png",
     thumbnailDimensions: { width: 1200, height: 900 },
     hasDemo: false,
-    hasRepo: false,
+    hasRepo: true,
     demoUrl: "",
-    repoUrl: "",
+    repoUrl: "https://github.com/siddhp1/Face-Mask-Detector",
   },
   {
     title: "Messenger",
@@ -96,20 +125,6 @@ const projects = [
     hasRepo: true,
     demoUrl: "https://siddhp1.github.io/Pomodoro-Timer/",
     repoUrl: "https://github.com/siddhp1/Pomodoro-Timer",
-  },
-  {
-    title: "Face Mask Detector",
-    shortDesc: "Convolutional neural network for detecting face masks",
-    longDesc:
-      "A face mask detector for verifying that a person is wearing a face mask correctly (over mouth and nose). Has two categories: “with mask” and “without mask”. Classification is done with a convolutional neural network, made with Tensorflow Keras. Demo GUI uses OpenCV and the HaarCascade Frontal Face model to apply the face mask model to camera input. Features a data augmentation engine and MatPlotLib training visualization.",
-    skills: ["Python", "Tensorflow", "OpenCV"],
-    thumbnail:
-      "https://siddhpersonalwebsite.blob.core.windows.net/images/facemaskdetector.png",
-    thumbnailDimensions: { width: 1200, height: 900 },
-    hasDemo: false,
-    hasRepo: true,
-    demoUrl: "",
-    repoUrl: "https://github.com/siddhp1/Face-Mask-Detector",
   },
 ];
 
