@@ -88,11 +88,10 @@ const projects = [
     title: "Messenger",
     shortDesc: "Desktop application for WAN messaging",
     longDesc:
-      "A desktop application for WAN messaging with others, either through a global chat or direct messages. Has an external server, which can be hosted anywhere in the world, and users can download the client, connect with a server, and message other users connected to the same server. Built with Maven in Java, using Swing as a GUI framework. Features socket programming and multithreading.",
-    skills: ["Java", "Swing", "Maven"],
-    thumbnail:
-      "https://siddhpersonalwebsite.blob.core.windows.net/images/messenger.png",
-    thumbnailDimensions: { width: 1200, height: 900 },
+      "A desktop application for WAN messaging built with Java and Maven, featuring a Swing-based GUI, socket programming, and multithreading.$nUsers can chat, either through a global channel (with all clients connected to the server) or direct messages (client to client).$nMessenger has an external server that can be hosted anywhere in the world, allowing users to download the client, connect to the server, and message other users who are also connected to it.",
+    skills: ["Java", "Swing", "Socket Programming", "Maven"],
+    thumbnail: "/messenger.png",
+    thumbnailDimensions: { width: 1440, height: 1080 },
     hasDemo: false,
     hasRepo: true,
     demoUrl: "",
