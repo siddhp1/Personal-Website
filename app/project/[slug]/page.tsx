@@ -12,7 +12,7 @@ export default function Project({ params }: { params: { slug: number } }) {
   return (
     <>
       <Header />
-      <div className="flex flex-col xl:grid xl:grid-cols-2 gap-8 mx-6 md:mx-20 lg:mx-40 mt-6 mb-12 xl:mt-36 xl:mb-60">
+      <div className="flex flex-col xl:grid xl:grid-cols-2 gap-8 mx-6 md:mx-20 lg:mx-40 mt-6 mb-12 xl:mt-36 xl:mb-64">
         <div className="flex flex-col">
           {/* Title */}
           <h1 className="text-3xl font-medium text-light-9 dark:text-dark-9">

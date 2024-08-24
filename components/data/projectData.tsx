@@ -12,48 +12,48 @@ export interface Project {
 }
 
 const projects = [
-  // {
-  //   title: "What To Cook",
-  //   shortDesc: "Full-stack mobile app for home cooks (coming soon)",
-  //   longDesc:
-  //     "COMING SOON$nA desktop application for WAN messaging with others, either through a global chat or direct messages. Has an external server, which can be hosted anywhere in the world, and users can download the client, connect with a server, and message other users connected to the same server. Built with Maven in Java, using Swing as a GUI framework. Features socket programming and multithreading.",
-  //   skills: [
-  //     "Expo",
-  //     "React Native",
-  //     "TypeScript",
-  //     "Django",
-  //     "Azure App Service",
-  //     "Azure PostgreSQL",
-  //     "Azure Blob Storage",
-  //   ],
-  //   thumbnail:
-  //     "https://siddhpersonalwebsite.blob.core.windows.net/images/messenger.png",
-  //   thumbnailDimensions: { width: 1200, height: 900 },
-  //   hasDemo: false,
-  //   hasRepo: false,
-  //   demoUrl: "https://github.com/siddhp1/Messenger",
-  //   repoUrl: "https://github.com/siddhp1/Messenger",
-  // },
-  // {
-  //   title: "Sysfetch",
-  //   shortDesc: "System information fetching",
-  //   longDesc:
-  //     "COMING SOON$nA desktop application for WAN messaging with others, either through a global chat or direct messages. Has an external server, which can be hosted anywhere in the world, and users can download the client, connect with a server, and message other users connected to the same server. Built with Maven in Java, using Swing as a GUI framework. Features socket programming and multithreading.",
-  //   skills: ["C", "CMake"],
-  //   thumbnail:
-  //     "https://siddhpersonalwebsite.blob.core.windows.net/images/messenger.png",
-  //   thumbnailDimensions: { width: 1200, height: 900 },
-  //   hasDemo: false,
-  //   hasRepo: true,
-  //   demoUrl: "https://github.com/siddhp1/Messenger",
-  //   repoUrl: "https://github.com/siddhp1/Messenger",
-  // },
+  {
+    title: "What To Cook",
+    shortDesc: "Dish tracking and recommendation mobile app",
+    longDesc:
+      "Coming soon. (beta testing)$nWhat To Cook is an app made for homecooks that struggle to decide what to cook every day. Keep track of all of the dishes you've ever made and get recommendations for future meals!$nBuilt for iOS and Android.",
+    skills: [
+      "TypeScript",
+      "Expo",
+      "React Native",
+      "Python",
+      "Django",
+      "Azure App Service",
+      "Azure PostgreSQL",
+      "Azure Blob Storage",
+    ],
+    thumbnail: "/comingsoon.png",
+    thumbnailDimensions: { width: 2800, height: 2100 },
+    hasDemo: false,
+    hasRepo: false,
+    demoUrl: "",
+    repoUrl: "",
+  },
+  {
+    title: "Sysgrab",
+    shortDesc: "Customizable system information fetching",
+    longDesc:
+      "Sysgrab is a lightweight and customizable system information tool, which fetches and displays system details such as OS, Architecture, CPU, Memory, and more in the terminal.$nUsers can configure Sysgrab's base and accent colors, and add ASCII art of their choice through the CLI or by directly editing the configuration files.$nSysgrab is compatible with all Linux distributions, and features CMake for build automation and GitHub Actions for CI/CD.",
+    skills: ["C", "CMake", "GitHub Actions"],
+    thumbnail: "/sysgrab.png",
+    thumbnailDimensions: { width: 2800, height: 2100 },
+    hasDemo: false,
+    hasRepo: true,
+    demoUrl: "",
+    repoUrl: "https://github.com/siddhp1/Sysgrab",
+  },
   {
     title: "Culinary Compass",
     shortDesc: "Restaurant tracking and recommendation web app",
     longDesc:
       "Culinary Compass lets users track and rate restaurant visits. A user profile is then built using data collected about the restaurants they visit. Recommendations are made using a cosine similarity algorithm comparing the user's profile with restaurants in a selected location.$nUsers can generate a year-end PDF recap of their favorite restaurants, cuisines, price categories, and dining times, created with ReportLab and Matplotlib.$nUser information is stored securely in a SQLite database with bcrypt password hashing. Culinary Compass is deployed on Azure using Nginx, Gunicorn, and Supervisor.",
     skills: [
+      "Python",
       "Flask",
       "Scikit-Learn",
       "ReportLab",
@@ -71,18 +71,17 @@ const projects = [
     repoUrl: "https://github.com/siddhp1/Culinary-Compass",
   },
   {
-    title: "Face Mask Detector",
-    shortDesc: "Convolutional neural network for detecting face masks",
+    title: "Gesture Controller",
+    shortDesc: "Gesture-powered multimedia controls",
     longDesc:
-      "A face mask detector for verifying that a person is wearing a face mask correctly (over mouth and nose). Has two categories: “with mask” and “without mask”. Classification is done with a convolutional neural network, made with Tensorflow Keras. Demo GUI uses OpenCV and the HaarCascade Frontal Face model to apply the face mask model to camera input. Features a data augmentation engine and MatPlotLib training visualization.",
-    skills: ["Python", "Tensorflow", "OpenCV"],
-    thumbnail:
-      "https://siddhpersonalwebsite.blob.core.windows.net/images/facemaskdetector.png",
-    thumbnailDimensions: { width: 1200, height: 900 },
+      "Gesture Controller is powered by a feedforward neural network that is trained on hand landmark data collected from the HaGRID dataset.$nThe model is then used to make predictions on hand gestures from a live camera feed and map them to multimedia controls, which can be customized through a configuration file.$nThe Gesture Controller desktop application is coming soon, and will be written in C++, with a focus on performance and cross-platform compatibility.",
+    skills: ["Python", "Tensorflow", "OpenCV", "MediaPipe", "PyAutoGUI"],
+    thumbnail: "/comingsoon.png",
+    thumbnailDimensions: { width: 2800, height: 2100 },
     hasDemo: false,
     hasRepo: true,
     demoUrl: "",
-    repoUrl: "https://github.com/siddhp1/Face-Mask-Detector",
+    repoUrl: "https://github.com/siddhp1/Gesture-Controller",
   },
   {
     title: "Messenger",
@@ -98,28 +97,13 @@ const projects = [
     repoUrl: "https://github.com/siddhp1/Messenger",
   },
   {
-    title: "Scheveningen",
-    shortDesc: "Chess tournament organization web app",
-    longDesc:
-      "Scheveningen lets users organize Scheveningen-system chess tournaments easily and for free. Users are able to input team and individual player information, update round results, and get a standings after every round. At the end of the tournament, a finalized leaderboard is shown, and each team’s MVP is declared. Built with Django and vanilla HTML, CSS, and JavaScript. Hosted on PythonAnywhere. Made with a few of my high-school friends.",
-    skills: ["Django", "HTML", "CSS", "JavaScript", "PythonAnywhere"],
-    thumbnail:
-      "https://siddhpersonalwebsite.blob.core.windows.net/images/scheveningen.png",
-    thumbnailDimensions: { width: 1200, height: 900 },
-    hasDemo: false,
-    hasRepo: true,
-    demoUrl: "",
-    repoUrl: "https://github.com/hlsschessclub/Scheveningen",
-  },
-  {
     title: "Pomodoro Timer",
     shortDesc: "Static pomodoro timer website",
     longDesc:
-      "A Pomodoro timer website with customizable durations for pomodoro sessions, short breaks, and long breaks. Built with vanilla HTML, CSS, and Javascript, and hosted on GitHub Pages. Soon to be replaced with Focus, a full-stack (Django + ReactJS/React Native) cross platform application for Pomodoro technique, organized studying, and overall time management.",
-    skills: ["HTML", "CSS", "JavaScript"],
-    thumbnail:
-      "https://siddhpersonalwebsite.blob.core.windows.net/images/pomodorotimer.png",
-    thumbnailDimensions: { width: 1200, height: 900 },
+      "A Pomodoro timer website with customizable durations for Pomodoro sessions, short breaks, and long breaks.$nSoon to be replaced with Focus, a full-stack cross-platform application for Pomodoro technique, organized and collaborative studying, and overall time management.",
+    skills: ["HTML", "CSS", "JavaScript", "GitHub Actions", "GitHub Pages"],
+    thumbnail: "/pomodorotimer.png",
+    thumbnailDimensions: { width: 3360, height: 2520 },
     hasDemo: true,
     hasRepo: true,
     demoUrl: "https://siddhp1.github.io/Pomodoro-Timer/",

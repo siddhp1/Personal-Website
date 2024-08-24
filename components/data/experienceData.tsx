@@ -1,6 +1,7 @@
 export interface Experience {
   title: string;
   company: string;
+  hasUrl: boolean;
   companyUrl: string;
   hasLogo: boolean;
   logo?: string;
@@ -17,22 +18,29 @@ export interface Experience {
 
 const experiences = [
   {
-    title: "Temp",
-    company: "Temp",
-    companyUrl: "https://siddhp.me",
+    title: "Fullstack Developer",
+    company: "HLSS Chess Club",
+    hasUrl: false,
+    companyUrl: "",
     hasLogo: true,
-    logo: "https://siddhwebsitestorage.blob.core.windows.net/media/images/uber.png",
-    logoDimensions: { width: 100, height: 100 },
+    logo: "/chessclublogo.png",
+    logoDimensions: { width: 196, height: 191 },
     useLogoAsName: false,
-    startDate: "01 Sep 2024",
-    endDate: "01 Dec 2024",
-    location: "Temp",
+    startDate: "10 Oct 2023",
+    endDate: "17 Dec 2023",
+    location: "Brampton, Ontario",
     description:
-      "Culinary Compass lets users track restaurant visits by entering the restaurant, visit date, and a rating out of 5 stars, with assistance from the Google Places Autocomplete API. The Foursquare Places API fetches data about the restaurant to build a user profile. Recommendations are made using a Scikit-Learn cosine similarity algorithm based on the user's profile and selected location/radius via Google Maps. Users can generate a year-end PDF report of their favorite restaurants, cuisines, price categories, and dining times, created with ReportLab and Matplotlib, and emailed to them. User information is stored securely in a SQLite database with bcrypt password hashing, and password resets are managed via email. Culinary Compass is deployed on Azure using Nginx, Gunicorn, Supervisor, and secured with TLS via Certbot.",
-    skills: ["Working"],
-    image:
-      "https://siddhwebsitestorage.blob.core.windows.net/media/images/uber.png",
-    imageDimensions: { width: 100, height: 100 },
+      "Developed a chess tournament organization web application in-house for use in school tournaments.$nLed a team of four developers over the course of six one-week sprints.",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Django",
+      "PythonAnywhere",
+      "GitHub Pages",
+    ],
+    image: "/scheveningen.png",
+    imageDimensions: { width: 1440, height: 1080 },
   },
 ];
 

@@ -16,7 +16,7 @@ export default function Hero() {
             width={1000}
             height={1000}
             alt="Profile picture"
-            className="justify-center h-90 w-90 md:h-96 md:w-96 rounded-full"
+            className="justify-center h-auto w-90 md:h-96 md:w-96 rounded-full"
             priority={true}
           />
         </div>

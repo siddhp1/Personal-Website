@@ -46,7 +46,7 @@ export default function Experience({ params }: { params: { slug: number } }) {
   return (
     <>
       <Header />
-      <div className="flex flex-col xl:grid xl:grid-cols-2 gap-8 mx-6 md:mx-20 lg:mx-40 mt-6 mb-12 xl:mt-36 xl:mb-60">
+      <div className="flex flex-col xl:grid xl:grid-cols-2 gap-8 mx-6 md:mx-20 lg:mx-40 mt-6 mb-12 xl:mt-36 xl:mb-64">
         <div className="flex flex-col">
           {/* Title */}
           <h1 className="text-3xl font-medium text-light-9 dark:text-dark-9">
@@ -55,18 +55,22 @@ export default function Experience({ params }: { params: { slug: number } }) {
           {/* Company, date, and location*/}
           <div className="my-2 flex flex-col md:flex-row md:items-center text-light-8 dark:text-dark-7">
             <div className="">
-              <a
-                href={experience.companyUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center"
-              >
-                @
-                <div className="flex items-center gap-2 rounded-xl ml-0.5 px-2 py-1 hover:bg-light-3 dark:hover:bg-dark-3 duration-200">
-                  {experience.company}
-                  <FaExternalLinkAlt className="size-4" />
-                </div>
-              </a>
+              {experience.hasUrl ? (
+                <a
+                  href={experience.companyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center"
+                >
+                  @
+                  <div className="flex items-center gap-2 rounded-xl ml-0.5 px-2 py-1 hover:bg-light-3 dark:hover:bg-dark-3 duration-200">
+                    {experience.company}
+                    <FaExternalLinkAlt className="size-4" />
+                  </div>
+                </a>
+              ) : (
+                <p>@ {experience.company}</p>
+              )}
             </div>
             <FaGripLinesVertical className="ml-2 mr-4 text-light-7 dark:text-dark-6 hidden md:block" />
             <p className="my-1 md:my-0">{experience.location}</p>

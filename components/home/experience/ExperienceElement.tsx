@@ -87,7 +87,7 @@ export default function ExperienceElement({
                     width="100"
                     height="100"
                     alt={experience.company}
-                    className="h-4 w-auto ml-2"
+                    className="h-6 w-auto ml-2"
                   />
                 ) : null}
               </div>

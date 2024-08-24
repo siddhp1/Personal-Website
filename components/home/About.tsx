@@ -21,10 +21,10 @@ export default function About() {
           opportunities, and learn new things. Feel free to reach out!
           <br />
           <br />
-          Check out my projects below
+          Check out my projects and experience below
           {data.showResume ? (
             <>
-              <span> or my</span>
+              <span>, or take a look at my</span>
               <span>
                 <a
                   href={data.resume}
