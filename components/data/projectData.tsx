@@ -41,7 +41,7 @@ const projects = [
       "Sysgrab is a lightweight and customizable system information tool, which fetches and displays system details such as OS, Architecture, CPU, Memory, and more in the terminal.$nUsers can configure Sysgrab's base and accent colors, and add ASCII art of their choice through the CLI or by directly editing the configuration files.$nSysgrab is compatible with all Linux distributions, and features CMake for build automation and GitHub Actions for CI/CD.",
     skills: ["C", "CMake", "GitHub Actions"],
     thumbnail: "/sysgrab.png",
-    thumbnailDimensions: { width: 2800, height: 2100 },
+    thumbnailDimensions: { width: 2700, height: 2025 },
     hasDemo: false,
     hasRepo: true,
     demoUrl: "",
