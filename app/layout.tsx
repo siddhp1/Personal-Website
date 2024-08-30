@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const IBMPlexMono = IBM_Plex_Mono({
@@ -49,6 +50,7 @@ export default function RootLayout({
         className={`bg-light-2 dark:bg-dark-2 min-h-screen ${IBMPlexMono.className}`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
