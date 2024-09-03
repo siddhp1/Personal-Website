@@ -23,7 +23,7 @@ export default function Hero() {
         <div className="flex mx-6 md:mx-20 xl:mx-40 my-8 md:my-16">
           {/* Button on larger screens */}
           <p className="hidden md:block md:text-2xl xl:text-4xl text-light-9 dark:text-dark-9">
-            I am Siddh, an aspiring software engineer, <br /> incoming
+            I am Siddh, an aspiring software engineer, <br /> studying
             {data.showHeadlineLink && typeof data.headlineLink === "string" ? (
               <span>
                 <a
