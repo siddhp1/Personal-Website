@@ -43,7 +43,7 @@ export default function Hero() {
           </p>
           {/* Continuous on mobile */}
           <p className="block md:hidden text-xl text-light-9 dark:text-dark-9">
-            I am Siddh, an aspiring software engineer, incoming Software
+            I am Siddh, an aspiring software engineer, studying Software
             Engineering at the University of Waterloo.
           </p>
         </div>
