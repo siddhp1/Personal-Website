@@ -64,12 +64,12 @@ export default function Experience({ params }: { params: { slug: number } }) {
                 >
                   @
                   <div className="flex items-center gap-2 rounded-xl ml-0.5 px-2 py-1 hover:bg-light-3 dark:hover:bg-dark-3 duration-200">
-                    {experience.company}
+                    {experience.useShort ? (experience.companyShort) : (experience.company)}
                     <FaExternalLinkAlt className="size-4" />
                   </div>
                 </a>
               ) : (
-                <p>@ {experience.company}</p>
+                <p>@ {experience.useShort ? (experience.companyShort) : (experience.company)}</p>
               )}
             </div>
             <FaGripLinesVertical className="ml-2 mr-4 text-light-7 dark:text-dark-6 hidden md:block" />
