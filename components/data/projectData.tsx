@@ -16,7 +16,7 @@ const projects = [
     title: "What To Cook",
     shortDesc: "Dish tracking and recommendation mobile app",
     longDesc:
-      "Coming soon. (beta testing)$nWhat To Cook is an app made for homecooks that struggle to decide what to cook every day. Keep track of all of the dishes you've ever made and get recommendations for future meals!$nBuilt for iOS and Android.",
+      "What To Cook is an app made for homecooks that struggle to decide what to cook every day. Keep track of all of the dishes you've ever made and get recommendations for future meals!$nBuilt for iOS and Android.",
     skills: [
       "TypeScript",
       "Expo",
@@ -30,16 +30,16 @@ const projects = [
     thumbnail: "/comingsoon.png",
     thumbnailDimensions: { width: 2800, height: 2100 },
     hasDemo: false,
-    hasRepo: false,
+    hasRepo: true,
     demoUrl: "",
-    repoUrl: "",
+    repoUrl: "https://github.com/siddhp1/What-To-Cook",
   },
   {
     title: "Sysgrab",
     shortDesc: "Customizable system information fetching",
     longDesc:
       "Sysgrab is a lightweight and customizable system information tool, which fetches and displays system details such as OS, Architecture, CPU, Memory, and more in the terminal.$nUsers can configure Sysgrab's base and accent colors, and add ASCII art of their choice through the CLI or by directly editing the configuration files.$nSysgrab is compatible with all Linux distributions, and features CMake for build automation and GitHub Actions for CI/CD.",
-    skills: ["C", "CMake", "GitHub Actions"],
+    skills: ["C", "LibYAML", "CMake", "GitHub Actions"],
     thumbnail: "/sysgrab.png",
     thumbnailDimensions: { width: 2700, height: 2025 },
     hasDemo: false,
