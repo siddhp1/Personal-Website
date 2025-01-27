@@ -16,7 +16,7 @@ const projects = [
     title: "What To Cook",
     shortDesc: "Dish tracking and recommendation mobile app",
     longDesc:
-      "What To Cook is an app made for homecooks that struggle to decide what to cook every day. Keep track of all of the dishes you've ever made and get recommendations for future meals!$nBuilt for iOS and Android.",
+      "What To Cook is an mobile app made for homecooks that struggle to decide what to cook every day. Keep track of all of the dishes you've ever made and get recommendations for future meals!",
     skills: [
       "TypeScript",
       "Expo",
@@ -27,7 +27,7 @@ const projects = [
       "Azure PostgreSQL",
       "Azure Blob Storage",
     ],
-    thumbnail: "/comingsoon.png",
+    thumbnail: "/whattocook.png",
     thumbnailDimensions: { width: 2800, height: 2100 },
     hasDemo: false,
     hasRepo: true,
