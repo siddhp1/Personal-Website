@@ -98,7 +98,6 @@ export default function Project({ params }: { params: { slug: number } }) {
           className="w-full hidden xl:block rounded-xl"
         />
       </div>
-      <Footer />
     </>
   );
 }
